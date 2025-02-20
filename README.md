@@ -1,12 +1,13 @@
 首先确保你的python版本在3.8至3.12版本内。
 
 请访问([Python](https://www.python.org/downloads/))官网进行下载所需版本并安装。
+此笔记主要应用到([PyTorch](https://pytorch.org/))作为学习与开发应用，如了解更多请访问它的官网。
 
-##安装必备库
+## 安装必备库
 
-pytorch库
+pytorch库（PyTorch是一个流行的深度学习框架）
 
-    pip install pytorch #安装
+    pip install torch torchvision torchaudio #安装
 
 cv2库（cv2是OpenCV的Python接口，用于图像处理和计算机视觉任务）
 
@@ -15,7 +16,7 @@ cv2库（cv2是OpenCV的Python接口，用于图像处理和计算机视觉任�
 tqdm库（tqdm   是一个用于显示进度条的库，可不需要，前提是在本脚本中删除它的函数）
  
     pip install tqdm
-##全部库
+## 全部库
     
     import os
     import cv2
@@ -25,15 +26,23 @@ tqdm库（tqdm   是一个用于显示进度条的库，可不需要，前提是
  
     def create_folders(base_folder):
 
+
+
     
 ## 自动创建主文件夹
      if not os.path.exists(base_folder):  # 检查主文件夹是否存在，如不存在则会自动创建
         os.makedirs(base_folder)
+
+![屏幕截图 2025-02-20 183202](https://github.com/user-attachments/assets/e7aec5f6-82da-4f8e-882b-bf825acb1ae5)
+
     
     for folder in ['red', 'green', 'blue']: # 在主文件夹下创建red, green, blue 子文件夹
         folder_path = os.path.join(base_folder, folder)
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
+
+![屏幕截图 2025-02-20 183351](https://github.com/user-attachments/assets/17273240-991e-4c26-917c-cfb359a80ccb)
+   
 
 ## 计算图片平均值
  
@@ -80,3 +89,11 @@ tqdm库（tqdm   是一个用于显示进度条的库，可不需要，前提是
        base_folder = 'class'  # 主文件夹路径
        classify_images(img_folder, base_folder)
        print("Image classification completed!")
+
+
+
+
+
+##The end
+本笔记就到这里了，欢迎各大IT友前来讨论。
+编辑作者：困困

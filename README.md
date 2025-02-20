@@ -1,17 +1,17 @@
 首先确保你的python版本在3.8至3.12版本内。
 
 请访问([Python](https://www.python.org/downloads/))官网进行下载所需版本并安装。
-
-import os
-import cv2
-import numpy as np
-from shutil import copyfile
-from tqdm import tqdm
+    #安装必备库
+ import os
+ import cv2
+ import numpy as np
+ from shutil import copyfile
+ from tqdm import tqdm
 
 ## 创建文件夹
-def create_folders(base_folder):
-    # 创建主文件夹
-    if not os.path.exists(base_folder):
+ def create_folders(base_folder):
+     # 创建主文件夹
+     if not os.path.exists(base_folder):
         os.makedirs(base_folder)
     
     # 在主文件夹下创建 red, green, blue 子文件夹
@@ -21,6 +21,8 @@ def create_folders(base_folder):
             os.makedirs(folder_path)
 
 ## 判断图片的主要颜色
+
+
 def dominant_color(image):
     # 计算每个颜色通道的均值
     avg_color_per_row = np.average(image, axis=0)
@@ -38,6 +40,8 @@ def dominant_color(image):
         return 'red'
 
 ## 主函数
+
+
 def classify_images(img_folder, base_folder):
     # 创建目标文件夹
     create_folders(base_folder)
@@ -60,6 +64,8 @@ def classify_images(img_folder, base_folder):
         copyfile(img_path, target_folder)
 
 ## 执行
+
+
 if __name__ == "__main__":
     img_folder = 'img'  # 图片文件夹路径
     base_folder = 'class'  # 主文件夹路径

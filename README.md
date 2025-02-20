@@ -16,7 +16,7 @@ cv2库（cv2是OpenCV的Python接口，用于图像处理和计算机视觉任�
 
 tqdm库（tqdm   是一个用于显示进度条的库，可不需要，前提是在本脚本中删除它的函数）
  
-    pip install tqdm
+    pip install tqdm  #安装
 # 全部库
     
     import os

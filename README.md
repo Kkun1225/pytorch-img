@@ -1,6 +1,7 @@
 首先确保你的python版本在3.8至3.12版本内。
 
 请访问([Python](https://www.python.org/downloads/))官网进行下载所需版本并安装。
+
 此笔记主要应用到([PyTorch](https://pytorch.org/))作为学习与开发应用，如了解更多请访问它的官网。
 
 ## 安装必备库

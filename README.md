@@ -4,6 +4,18 @@
 
 ##安装必备库
 
+pytorch库
+
+    pip install pytorch #安装
+
+cv2库（cv2是OpenCV的Python接口，用于图像处理和计算机视觉任务）
+
+    pip install opencv-python  #安装
+
+tqdm库（tqdm   是一个用于显示进度条的库，可不需要，前提是在本脚本中删除它的函数）
+ 
+    pip install tqdm
+##全部库
     
     import os
     import cv2
@@ -14,16 +26,16 @@
     def create_folders(base_folder):
 
     
-## 创建主文件夹
-     if not os.path.exists(base_folder):
+## 自动创建主文件夹
+     if not os.path.exists(base_folder):  # 检查主文件夹是否存在，如不存在则会自动创建
         os.makedirs(base_folder)
     
-    # 在主文件夹下创建red, green, blue 子文件夹
-    
-    for folder in ['red', 'green', 'blue']:
+    for folder in ['red', 'green', 'blue']: # 在主文件夹下创建red, green, blue 子文件夹
         folder_path = os.path.join(base_folder, folder)
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
+
+## 计算图片平均值
  
     def dominant_color(image):
 

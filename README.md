@@ -8,7 +8,7 @@ import numpy as np
 from shutil import copyfile
 from tqdm import tqdm
 
-# 创建文件夹
+## 创建文件夹
 def create_folders(base_folder):
     # 创建主文件夹
     if not os.path.exists(base_folder):
@@ -20,7 +20,7 @@ def create_folders(base_folder):
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
 
-# 判断图片的主要颜色
+## 判断图片的主要颜色
 def dominant_color(image):
     # 计算每个颜色通道的均值
     avg_color_per_row = np.average(image, axis=0)
@@ -37,7 +37,7 @@ def dominant_color(image):
     elif dominant == 2:
         return 'red'
 
-# 主函数
+## 主函数
 def classify_images(img_folder, base_folder):
     # 创建目标文件夹
     create_folders(base_folder)
@@ -59,7 +59,7 @@ def classify_images(img_folder, base_folder):
         target_folder = os.path.join(base_folder, color, img_name)
         copyfile(img_path, target_folder)
 
-# 执行
+## 执行
 if __name__ == "__main__":
     img_folder = 'img'  # 图片文件夹路径
     base_folder = 'class'  # 主文件夹路径

@@ -95,16 +95,31 @@ tqdm库（tqdm   是一个用于显示进度条的库，可不需要，前提是
 
 ## The end   下面进行测试环节
 
-1、如没有就请自行创建一个名为img的文件夹（注：要和脚本.py文件创建到同一个目录下）
+1、如没有就请自行创建一个名为img的文件夹（注：要和pytorch-img.py文件创建到同一个目录下）
 
-2、在img文件夹中放入n张分别含有红、绿、蓝元素的图片(一定要是jpg格式的)如图所示
+2、在img文件夹中放入n张分别含有红、绿、蓝元素的图片(一定要是jpg格式的)如图所示：
 
 ![屏幕截图 2025-02-20 183604](https://github.com/user-attachments/assets/e812304d-c075-43b6-9f18-e05dcbc3bb89)
 
+3、我们来执行pytorch-img.py文件 windows系统下
+
+所在目录右键在cmd中打开，执行：
+
+     python pytorch-img.py
+
+
+linux系统下所在目录执行：
+
+    python3 pytorch-img.py
+
+4、如图所示，当进度条加载完成后表明图片已经分类好了
+
+![屏幕截图 2025-02-20 185053](https://github.com/user-attachments/assets/2165ed33-bbf3-4c15-8e3b-4c05882c001d)
 
 
 
+5、接着我们分别查看class中的red、green、bule三个目录，所见 您放到img文件中的图片已经帮您按三色源分类好
 
-本笔记就到这里了，欢迎各大IT友前来讨论。
+## 本笔记就到这里了，欢迎各大IT友前来讨论。
 
 编辑作者：困困

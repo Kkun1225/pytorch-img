@@ -16,7 +16,7 @@ cv2库（cv2是OpenCV的Python接口，用于图像处理和计算机视觉任�
 tqdm库（tqdm   是一个用于显示进度条的库，可不需要，前提是在本脚本中删除它的函数）
  
     pip install tqdm
-## 全部库
+# 全部库
     
     import os
     import cv2
@@ -29,7 +29,7 @@ tqdm库（tqdm   是一个用于显示进度条的库，可不需要，前提是
 
 
     
-## 自动创建主文件夹
+# 自动创建主文件夹
      if not os.path.exists(base_folder):  # 检查主文件夹是否存在，如不存在则会自动创建
         os.makedirs(base_folder)
 
@@ -44,7 +44,7 @@ tqdm库（tqdm   是一个用于显示进度条的库，可不需要，前提是
 ![屏幕截图 2025-02-20 183351](https://github.com/user-attachments/assets/17273240-991e-4c26-917c-cfb359a80ccb)
    
 
-## 计算图片平均值
+# 计算图片平均值
  
     def dominant_color(image):
 
@@ -67,20 +67,20 @@ tqdm库（tqdm   是一个用于显示进度条的库，可不需要，前提是
 
     create_folders(base_folder)
     
-## 遍历图片文件夹
+# 遍历图片文件夹
     for img_name in tqdm(os.listdir(img_folder), desc="Processing images"):
         img_path = os.path.join(img_folder, img_name)
         
-## 读取图片
+# 读取图片
         image = cv2.imread(img_path)
         if image is None:
             print(f"Failed to load image: {img_path}")
             continue
         
-## 判断主要颜色
+# 判断主要颜色
         color = dominant_color(image)
         
-## 将图片复制到对应文件夹
+# 将图片复制到对应文件夹
         target_folder = os.path.join(base_folder, color, img_name)
         copyfile(img_path, target_folder)
 

@@ -3,13 +3,6 @@
 请访问([Python](https://www.python.org/downloads/))官网进行下载所需版本并安装。
     #安装必备库
 
-
-
-
-
-
-
-
     
     import os
     import cv2
@@ -18,7 +11,9 @@
     from tqdm import tqdm
  
     def create_folders(base_folder):
-     # 创建主文件夹
+
+    
+## 创建主文件夹
      if not os.path.exists(base_folder):
         os.makedirs(base_folder)
     
